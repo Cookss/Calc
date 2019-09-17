@@ -19,7 +19,7 @@ if vel == '?':
 
 else:
     x = input("Type in x (displacement): ")
-    xo = input("Type in xo (average displacement): ")
+    xo = input("Type in xo (final displacement): ")
 
 if x == '?':
     answer1 = int(xo) + int(vel) * int(xo) * int(time) * int(.5) * int(speed) * int(time) ^ int(2)
