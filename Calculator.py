@@ -9,22 +9,6 @@ if vel == '?':
     print(answer)
     x = input("Type in x (displacement): ")
     xo = input("Type in xo (average displacement): ")
-
-    if x == '?':
-        answer1 = int(xo) + int(vel) * int(xo) * int(time) * int(.5) * int(speed) * int(time) ^ int(2)
-        print('x: ')
-        print(answer1)
-        raise SystemExit
-
-
-    else:
-        x = input("Type in x (displacement): ")
-        xo = input("Type in xo (final displacement): ")
-
-    if x == '?':
-        answer1 = int(xo) + int(vel) * int(xo) * int(time) * int(.5) * int(speed) * int(time) ^ int(2)
-        print('x: ')
-        print(answer1)
 elif speed == '?':
     speed = int(vel) * int(time)
     print('Speed: ')
@@ -38,12 +22,18 @@ elif speed == '?':
         print(answer1)
         raise SystemExit
 
+    if x == '?':
+        answer1 = int(xo) + int(vel) * int(xo) * int(time) * int(.5) * int(speed) * int(time) ^ int(2)
+        print('x: ')
+        print(answer1)
+        raise SystemExit
+
 
 else:
     x = input("Type in x (displacement): ")
     xo = input("Type in xo (final displacement): ")
 
-    if x == '?':
-        answer1 = int(xo) + int(vel) * int(xo) * int(time) * int(.5) * int(speed) * int(time) ^ int(2)
-        print('x: ')
-        print(answer1)
+if x == '?':
+    answer1 = int(xo) + int(vel) * int(xo) * int(time) * int(.5) * int(speed) * int(time) ^ int(2)
+    print('x: ')
+    print(answer1)
