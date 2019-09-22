@@ -1,0 +1,51 @@
+vel = input("Type in the velocity: ")
+speed = input("Type in speed: ")
+time = input("Type in time: ")
+if time == '?':
+    time = 1
+vo = input("Type Vo")
+if vo == '?':
+    vo = 0
+a = input("Type Acceleration: ")
+
+if vel == '?':
+    answer = int(speed) / int(time)
+    vel = answer
+    print('Velocity: ')
+    print(answer)
+    if a == '?':
+        a = int(vel) - int(vo)
+        print("Speed: ")
+        print(a)
+    x = input("Type in x (displacement): ")
+    xo = input("Type in xo (average displacement): ")
+    if xo == '?':
+        xo = 0
+elif speed == '?':
+    speed = int(vel) * int(time)
+    print('Speed: ')
+    print(speed)
+    x = input("Type in x (displacement): ")
+    xo = input("Type in xo (average displacement): ")
+    if xo == '?':
+        xo = 0
+    a = int(vo) - int(vel) / int(time)
+    print("Acceleration: ")
+    print(a)
+
+    if x == '?':
+        answer1 = int(xo) + int(vel) * int(xo) * int(time) * int(.5) * int(speed) * int(time) ^ int(2)
+        print('x: ')
+        print(answer1)
+        raise SystemExit
+
+else:
+    x = input("Type in x (displacement): ")
+    xo = input("Type in xo (final displacement): ")
+    if xo == '?':
+        xo = 0
+
+if x == '?':
+    answer1 = int(xo) + int(vel) * int(xo) * int(time) * int(.5) * int(speed) * int(time) ^ int(2)
+    print('x: ')
+    print(answer1)
