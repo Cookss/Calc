@@ -8,7 +8,7 @@ if time == '?':
     time = 1
 vo = input("Type Vo: ")
 if vo == '?':
-    vo = 0
+    vo = 1
 a = input("Type Acceleration: ")
 
 if vel == '?':
@@ -37,13 +37,13 @@ elif speed == '?':
     print(a)
 
     if x == '?':
-        answer1 = int(xo) + int(vel) * int(xo) * int(time) * int(.5) * int(speed) * int(time) ^ int(2)
+        answer1 = int(xo) + int(vel) * int(time)
         x = int(answer1)
         print('x: ')
         print(answer1)
 
         ten = np.linspace(int(xo), int(x), int(time))
-        zen = np.linspace(int(xo), int(vo) * int(speed), int(x))
+        zen = np.linspace(int(xo), int(x), int(speed) + int(a))
         plt.plot(zen, label="Object speed")
         plt.plot(ten, label="Object's displacement")
         plt.plot()
@@ -66,12 +66,12 @@ else:
         xo = 0
 
 if x == '?':
-    answer1 = int(xo) + int(vel) * int(xo) * int(time) * int(.5) * int(speed) * int(time) ^ int(2)
+    answer1 = int(xo) + int(vel) * int(time)
     print('x: ')
     print(answer1)
 
 ten = np.linspace(int(xo), int(x), int(time))
-zen = np.linspace(int(xo), int(vo) * int(speed), int(x))
+zen = np.linspace(int(xo), int(x), int(speed) + int(a))
 plt.plot(zen, label="Object speed")
 plt.plot(ten, label="Object's displacement")
 plt.plot()
@@ -82,6 +82,5 @@ plt.ylabel('Destination')
 plt.title("Results")
 
 plt.legend()
-
 plt.show(block=True)
 plt.interactive(True)
